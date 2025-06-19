@@ -1,0 +1,19 @@
+---
+- name: Instalar Nginx
+  apt:
+    name: nginx
+    state: present
+    update_cache: true
+
+- name: Habilitar y arrancar Nginx
+  service:
+    name: nginx
+    state: started
+    enabled: true
+
+- name: Copiar landing page estilo hacker desde plantilla
+  template:
+    src: index.html.j2
+    dest: /var/www/html/index.html
+    mode: '0644'
+

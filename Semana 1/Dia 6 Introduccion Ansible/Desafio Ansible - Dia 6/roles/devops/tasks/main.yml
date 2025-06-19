@@ -1,0 +1,16 @@
+---
+- name: Crear usuario devops
+  user:
+    name: devops
+    shell: /bin/bash
+    groups: sudo
+    append: yes
+    create_home: yes
+
+- name: Permitir sudo sin contraseña (opcional y seguro para Vagrant)
+  lineinfile:
+    dest: /etc/sudoers.d/devops
+    line: "devops ALL=(ALL) NOPASSWD:ALL"
+    create: yes
+    mode: '0440'
+
