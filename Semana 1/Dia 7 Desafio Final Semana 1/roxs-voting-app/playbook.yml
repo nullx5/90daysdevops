@@ -1,0 +1,13 @@
+---
+- name: Desplegar Roxs Voting App
+  hosts: all
+  become: true
+
+  roles:
+    - common
+    - postgresql
+    - redis
+    - worker
+    - result
+    - vote
+

@@ -1,0 +1,24 @@
+---
+- name: Ajustar host de base de datos en result main.js
+  ansible.builtin.replace:
+    path: /home/vagrant/app/roxs-voting-app/result/main.js
+    regexp: "const dbhost = process\\.env\\.DATABASE_HOST \\|\\| 'database';"
+    replace: "const dbhost = process.env.DATABASE_HOST || 'localhost';"
+
+- name: Instalar dependencias con npm en result
+  npm:
+    path: /home/vagrant/app/roxs-voting-app/result
+  become_user: vagrant
+
+- name: Iniciar servicio result con PM2 (sin startup)
+  shell: |
+    pm2 start main.js --name vote-result -- -p 3000
+    pm2 save
+  args:
+    chdir: /home/vagrant/app/roxs-voting-app/result
+  become_user: vagrant
+
+- name: Configurar PM2 para iniciar con systemd (result)
+  shell: |
+    env PATH=$PATH:/usr/bin pm2 startup systemd -u vagrant --hp /home/vagrant
+  become: true
