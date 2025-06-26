@@ -1,5 +1,6 @@
 ## Prerequisitos
 
+```
  freelancer-deploy
 ├──  files
 │  └──  nginx.conf
@@ -7,10 +8,11 @@
 ├──  playbook.yml
 ├──  README.md
 └──  Vagrantfile
+```
 
 ### Instalar en tu máquina local:
 
-`sudo apt install ansible -y`
+`sudo apt install ansible -y` o
 `pip install ansible`
 
 - vagrant --version 
