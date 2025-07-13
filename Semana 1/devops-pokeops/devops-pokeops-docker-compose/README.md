@@ -1,5 +1,9 @@
 [https://www.youtube.com/watch?v=QXmcnP8T508&t=2h34m10s](https://www.youtube.com/watch?v=QXmcnP8T508&t=2h34m10s)
+
+
 Extension VSCODE Docker DX
+
+[https://hub.docker.com/r/roxsross12/pokeops/tags](https://hub.docker.com/r/roxsross12/pokeops/tags)
 
 # Run containers:
 
