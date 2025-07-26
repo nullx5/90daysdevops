@@ -1,0 +1,17 @@
+{
+  "name": "node-mongo-app",
+  "version": "1.0.0",
+  "description": "Aplicación con Nodejs con express y MongoDB con mongoose",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.4",
+    "mongoose": "^7.6.0"
+  }
+}
+
