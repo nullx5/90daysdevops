@@ -2,6 +2,11 @@
 
 [https://github.com/nullx5/workflows-github-actions/actions](https://github.com/nullx5/workflows-github-actions/actions)
 
+>Ejemplo workflow deploy with git push
+[https://gist.github.com/nullx5/838ad8a7311b94c803d2d41a45051839](https://gist.github.com/nullx5/838ad8a7311b94c803d2d41a45051839)
+
+> Ejemplo workflow git merge with pull request
+[https://github.com/nullx5/mi-primer-pull-request/blob/main/.github/workflows/auto-pr-merge.yml](https://github.com/nullx5/mi-primer-pull-request/blob/main/.github/workflows/auto-pr-merge.yml)
 ### Elementos principales del workflow
 
 | Elemento  | Descripción                                                  | Ejemplo                         |
