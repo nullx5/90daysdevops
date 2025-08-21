@@ -2,6 +2,20 @@
 
 [https://github.com/nullx5/workflows-github-actions/actions](https://github.com/nullx5/workflows-github-actions/actions)
 
+### Elementos principales del workflow
+
+| Elemento  | Descripción                                                  | Ejemplo                         |
+|-----------|--------------------------------------------------------------|---------------------------------|
+| name      | Nombre descriptivo del workflow (opcional).                  | `name: CI Pipeline`             |
+| on        | Evento(s) que disparan la ejecución del workflow.            | `on: [push, pull_request]`      |
+| jobs      | Conjunto de trabajos que se ejecutarán en el workflow.       | `jobs:`                         |
+| runs-on   | Especifica el sistema operativo/runner donde se ejecutará el job. | `runs-on: ubuntu-latest`   |
+| steps     | Lista de pasos dentro de un job.                             | `steps:`                        |
+| uses      | Indica que un paso usa una acción existente.                 | `uses: actions/checkout@v4`     |
+| run       | Comando de shell que se ejecuta dentro de un paso.           | `run: npm install`              |
+| env       | Variables de entorno para jobs o steps.                      | `env: { NODE_ENV: production }` |
+
+
 ## ✨ ¡Tu primer workflow de CI/CD!
 
 ### Paso 1: Crear tu proyecto
