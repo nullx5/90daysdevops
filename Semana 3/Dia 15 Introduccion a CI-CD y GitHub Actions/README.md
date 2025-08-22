@@ -14,10 +14,10 @@
 | name      | Nombre descriptivo del workflow (opcional).                  | `name: CI Pipeline`             |
 | on        | Evento(s) que disparan la ejecución del workflow.            | `on: [push, pull_request]`      |
 | jobs      | Conjunto de trabajos que se ejecutarán en el workflow.       | `jobs:`                         |
-| runs-on   | Especifica el sistema operativo/runner donde se ejecutará el job. | `runs-on: ubuntu-latest`   |
+| runs-on   | Especifica el sistema operativo/runner donde se ejecutará el job. | `runs-on: ubuntu-latest, windows-latest, macos-latest` |
 | steps     | Lista de pasos dentro de un job.                             | `steps:`                        |
 | uses      | Indica que un paso usa una acción existente.                 | `uses: actions/checkout@v4`     |
-| run       | Comando de shell que se ejecuta dentro de un paso.           | `run: npm install`              |
+| run       | Comandos que se ejecuta dentro de un paso. `run` puede ejecutar cualquier lenguaje. `bash, python, nodejs. etc` | `run: npm install`              |
 | env       | Variables de entorno para jobs o steps.                      | `env: { NODE_ENV: production }` |
 
 
