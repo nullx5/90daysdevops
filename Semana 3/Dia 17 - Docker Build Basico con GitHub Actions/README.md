@@ -2,6 +2,14 @@
 
 [https://github.com/nullx5/workflows-github-actions/actions/workflows/docker-build.yml](https://github.com/nullx5/workflows-github-actions/actions/workflows/docker-build.yml)
 
+- `GHCR (GitHub Container Registry)` es el registro de contenedores de GitHub.
+
+- Permite almacenar y distribuir imágenes Docker y OCI, integrado directamente con GitHub.
+
+[https://github.com/nullx5/workflows-github-actions/pkgs/container/workflows-github-actions](https://github.com/nullx5/workflows-github-actions/pkgs/container/workflows-github-actions)
+
+`sudo docker pull ghcr.io/nullx5/workflows-github-actions:sha-15fd50e`
+
 ## 🐳 Docker + GitHub Actions = Magia
 
 ![](../../static/images/banner/3.png)
