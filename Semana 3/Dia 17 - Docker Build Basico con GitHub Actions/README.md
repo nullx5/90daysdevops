@@ -10,6 +10,8 @@
 
 `sudo docker pull ghcr.io/nullx5/workflows-github-actions:sha-15fd50e`
 
+`sudo docker run --name ghcr -d -p 5000:5000 ghcr.io/nullx5/workflows-github-actions:sha-15fd50e`
+
 ## 🐳 Docker + GitHub Actions = Magia
 
 ![](../../static/images/banner/3.png)
