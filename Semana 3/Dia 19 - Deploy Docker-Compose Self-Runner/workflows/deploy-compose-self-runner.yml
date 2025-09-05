@@ -1,0 +1,30 @@
+name: Deploy Docker Compose Self-Runner
+
+on:
+  push:
+    branches: [Dia-19-Deploy-Docker-Compose-Self-Runner]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: [self-hosted, linux, rox]
+
+    steps:
+    - name: Checkout código
+      uses: actions/checkout@v4
+
+    - name: Parar servicios anteriores
+      run: docker compose down -v || true
+
+    - name: Construir servicios
+      run: docker compose -f docker-compose.yml build
+
+    - name: Levantar servicios
+      run: | 
+        docker compose -f docker-compose.yml up -d
+        sleep 10
+        curl -I http://localhost
+        curl -I http://localhost:3000
+        curl -I http://localhost:3001
+
+  
